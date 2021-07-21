@@ -1,0 +1,10 @@
+com/amela/controller/emailController.java
+ com.amela.controller.emailController
+com/amela/model/tiente.java
+ com.amela.model.tiente
+com/amela/controller/ConvertMoneyController.java
+ com.amela.controller.ConvertMoneyController
+com/amela/server/translatesever.java
+ com.amela.server.translatesever
+com/amela/controller/translatecontroller.java
+ com.amela.controller.translatecontroller
