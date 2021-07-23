@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Sản Phẩm</h3>
+<p>
+    <a th:href="@{/sanpham/create}">
+        Thêm mới Sản Phẩm
+    </a>
+</p>
+<form method="get" action="/sanpham/search">
+    <fieldset>
+        <div>
+          <input type="text" name= "tukhoa">
+        </div>
+        <div>
+            <input type="submit" value="Search">
+        </div>
+    </fieldset>
+</form >
+<table id = "sanphams">
+    <thead>
+    <tr>
+        <th>Tên Sản Phẩm</th>
+        <th>Giá</th>
+        <th>Mô Tả</th>
+        <th>Nhà Sản Xuất</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>View</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row,rowStat : ${sanpham}">
+        <td th:text="${row.getTenSanPham()}"></td>
+        <td th:text="${row.getGia()}"></td>
+        <td th:text="${row.getMoTa()}"></td>
+        <td th:text="${row.getNhaSanXuat()}"></td>
+        <td><a th:href="@{/sanpham/{id}/edit(id=${row.getId()})}">edit</a></td>
+        <td><a th:href="@{/sanpham/{id}/delete(id=${row.getId()})}">delete</a></td>
+        <td><a th:href="@{/sanpham/{id}/view(id=${row.getId()})}">view</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
