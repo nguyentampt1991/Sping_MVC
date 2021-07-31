@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h1 th:text="#{customer.heading}"></h1>
+<p>
+    <a th:href="@{/customer/create}" th:text="#{customer.add}">
+        Add new customer
+    </a>
+</p>
+
+<table id = "customers">
+
+    Language: <a href="?lang=vn">VN</a> | <a href="?lang=haw">English</a>
+
+        <tr>
+            <th th:text="#{customer.name_label}"></th>
+            <th th:text="#{customer.email_label}"></th>
+            <th th:text="#{customer.address_label}"></th>
+        </tr>
+        <th:block th:each="customer : ${customer}">
+            <tr>
+                <td th:text="${customer.name}"></td>
+                <td th:text="${customer.email}"></td>
+                <td th:text="${customer.address}"></td>
+
+            </tr>
+        </th:block>
+
+</table>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
