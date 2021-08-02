@@ -1,0 +1,16 @@
+com/amela/Models/Smartphone.java
+ com.amela.Models.Smartphone
+com/amela/Service/ISmartphoneService.java
+ com.amela.Service.ISmartphoneService
+com/amela/Controllers/SmartphoneController.java
+ com.amela.Controllers.SmartphoneController
+com/amela/Service/SmartphoneService.java
+ com.amela.Service.SmartphoneService
+com/amela/Controllers/HomeController.java
+ com.amela.Controllers.HomeController
+com/amela/Repository/ISmartphoneRepository.java
+ com.amela.Repository.ISmartphoneRepository
+com/amela/AppInitializer.java
+ com.amela.AppInitializer
+com/amela/AppConfiguration.java
+ com.amela.AppConfiguration
